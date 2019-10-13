@@ -11,12 +11,13 @@ class App extends React.Component {
       items: [
         {text: "Buy Milk", done:false},
         {text: "Buy Tomatoes", done:false},
+        {text: "prout", done:false}
       ]
     }
   }
   markDone = (todo) => {
     let todos = this.state.items.map(t => {
-      if(t.text == todo.text){
+      if(t.text === todo.text){
         return Object.assign({}, t, {
          done: !t.done
         } )
